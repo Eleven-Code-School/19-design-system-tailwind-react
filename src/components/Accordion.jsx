@@ -7,7 +7,7 @@ const AccordionItem = ({ title, content, defaultOpen = false }) => {
     return (
         <section
             className={classNames(
-                "flex flex-col gap-md p-lg pb-0 rounded-2xl bg-brand-bg-darker cursor-pointer"
+                "flex flex-col gap-md md:gap-md p-md md:p-lg pb-0! rounded-2xl bg-brand-bg-darker cursor-pointer"
             )}
             onClick={() => setOpen((prev) => !prev)}
         >
@@ -32,7 +32,7 @@ const AccordionItem = ({ title, content, defaultOpen = false }) => {
 
             <div
                 className={classNames("grid transition-[grid-template-rows] duration-200 ease-out", {
-                    "pb-lg [grid-template-rows:1fr]": open,
+                    "pb-md md:pb-lg [grid-template-rows:1fr]": open,
                     "[grid-template-rows:0fr]": !open,
                 })}
             >

@@ -60,7 +60,7 @@ export const TeacherSection = () => {
                 </SectionContent>
 
                 <SectionContent title="Brands I worked with">
-                    <div className="flex gap-md">
+                    <div className="flex flex-wrap gap-md">
                         <img src={brand1} alt="Brand 1" />
                         <img src={brand2} alt="Brand 2" />
                         <img src={brand3} alt="Brand 3" />

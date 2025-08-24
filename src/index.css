@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Roboto", sans-serif;
+    --font-title: "Roboto Slab", sans-serif;
+    --text-h1: 60px;
+    --text-h2: 48px;
+    --text-h3: 32px;
+    --text-h4: 24px;
+    --text-h5: 20px;
+    --text-h6: 16px;
+
+    /* 🎨 Color primario */
+    --color-primary: #ff782d;
+    --color-primary-hover: #ffab2d;
+    --color-primary-pressed: #f8620e;
+
+    /* 🎨 Colores absolutos */
+    --color-black: #000c27;
+    --color-white: #ffffff;
+
+    /* 🎨 Colores de "marca" */
+    --color-brand-bg: #0f1537;
+    --color-brand-bg-darker: #000c27;
+    --color-brand-gray-dark: #666666;
+    --color-brand-gray: #999999;
+    --color-brand-gray-light: #dddddd;
+    --color-brand-grey-white: #f2f2f2;
+
+    /* 🎨 Colores de Estado */
+    --color-info: #2580d5;
+    --color-success: #55be24;
+    --color-warning: #eaeaea;
+    --color-danger: #f51a1a;
+
+    /* 📏 Espaciado */
+    --spacing-xs: 4px;
+    --spacing-sm: 12px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 40px;
+    --spacing-2xl: 60px;
+    --spacing-3xl: 100px;
+}
+
+@layer base {
+    h1 {
+        @apply font-title text-h1/[125%] font-semibold;
+    }
+    h2 {
+        @apply font-title text-h2/[125%] font-semibold;
+    }
+    h3 {
+        @apply font-title text-h3/[125%] font-semibold;
+    }
+    h4 {
+        @apply font-title text-h4/[125%] font-semibold;
+    }
+    h5 {
+        @apply font-title text-h5/[125%] font-semibold;
+    }
+    h6 {
+        @apply font-title text-h6/[125%] font-semibold;
+    }
+
+    p {
+        @apply font-sans text-base/[150%] font-normal;
+    }
+
+    .elevation {
+        @apply hover:translate-y-[-4px] transition;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    @apply bg-brand-bg;
+}

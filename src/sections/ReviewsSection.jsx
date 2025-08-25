@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import avatar1 from "../assets/images/review-1.png";
 import avatar2 from "../assets/images/review-2.png";
 import avatar3 from "../assets/images/review-3.png";
 import avatar4 from "../assets/images/review-4.png";
 import { SectionContainer } from "../components/SectionContainer";
+import { TextsContext } from "../context/TextContexts";
 
 const reviewsData = [
     {
@@ -35,6 +37,17 @@ const reviewsData = [
     },
 ];
 
+const imageMap = {
+    avatar1,
+    avatar2,
+    avatar3,
+    avatar4,
+};
+
+function getImage(imageKey) {
+    return imageMap[imageKey];
+}
+
 const renderStars = (stars) => {
     return Array.from({ length: stars }, (_, i) => (
         <svg
@@ -52,7 +65,11 @@ const renderStars = (stars) => {
 const ReviewCard = ({ author, content, stars, image }) => {
     return (
         <div className="border p-lg flex gap-md md:gap-lg rounded-2xl">
-            <img className="w-16 h-16 md:w-24 md:h-24 rounded-full" src={image} alt={`imagen de ${author}`} />
+            <img
+                className="w-16 h-16 md:w-24 md:h-24 rounded-full"
+                src={getImage(image)}
+                alt={`imagen de ${author}`}
+            />
             <div className="flex flex-col">
                 <div className="flex mb-sm gap-xs">{renderStars(stars)}</div>
                 <p className="mb-md">{content}</p>
@@ -65,13 +82,14 @@ const ReviewCard = ({ author, content, stars, image }) => {
 };
 
 export const ReviewsSection = () => {
+    const { texts } = useContext(TextsContext);
     return (
         <SectionContainer
-            title="What to Expect from this course"
+            title={texts?.reviewsTitle}
             bg="bg-brand-bg"
             childrenContainerStyle={"grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-lg"}
         >
-            {reviewsData.map((review, index) => (
+            {texts?.reviewsData?.map((review, index) => (
                 <ReviewCard key={index} {...review} />
             ))}
         </SectionContainer>

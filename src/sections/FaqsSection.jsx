@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { Accordion } from "../components/Accordion";
 import { SectionContainer } from "../components/SectionContainer";
+import { TextsContext } from "../context/TextContexts";
 
 const faqs = [
     {
@@ -25,15 +27,16 @@ const faqs = [
 ];
 
 export const FaqsSection = () => {
+    const { texts } = useContext(TextsContext);
     return (
         <SectionContainer
             title="Find the answers to your questions here"
             bg="bg-brand-bg"
             childrenContainerStyle={"grid grid-cols-1 lg:grid-cols-2 gap-lg"}
         >
-            <Accordion items={faqs} />
+            <Accordion items={texts?.faqs} />
 
-            <Accordion items={faqs} />
+            <Accordion items={texts?.faqs} />
         </SectionContainer>
     );
 };

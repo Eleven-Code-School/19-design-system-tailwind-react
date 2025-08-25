@@ -344,3 +344,217 @@ export const db = {
         },
     ],
 };
+
+export const dbTexts = {
+    links: [
+        { text: "Goals", to: "/goals" },
+        { text: "Curriculum", to: "/curriculum" },
+        { text: "Testimonial", to: "/testimonial" },
+        { text: "Instructors", to: "/instructors" },
+        { text: "FAQs", to: "/faqs" },
+    ],
+    syllabusTitle: "Tu plan de aprendizaje paso a paso",
+    expectationTitle: "Qué puedes esperar de este máster",
+    syllabusHeader: [
+        { title: "Duración", content: "12 semanas" },
+        { title: "Formato del curso", content: "Vídeos, artículos, retos prácticos y proyecto final" },
+        { title: "Nivel", content: "Principiante a Profesional" },
+        { title: "Método de estudio", content: "Online con soporte y feedback" },
+    ],
+    syllabusContent: [
+        {
+            number: "01",
+            title: "Fundamentos de programación y web",
+            blockSummary: "8 clases + 1 reto",
+            description:
+                "Pensamiento computacional, Git y flujo de trabajo, HTML semántico, CSS moderno (Flex, Grid, responsive).",
+        },
+        {
+            number: "02",
+            title: "JavaScript moderno",
+            blockSummary: "10 clases + ejercicios",
+            description: "JS desde cero, ES6+, asincronía y fetch, manipulación de arrays y objetos, DOM.",
+        },
+        {
+            number: "03",
+            title: "React desde cero",
+            blockSummary: "12 clases + proyecto guiado",
+            description: "Componentes, props, estado, hooks básicos y avanzados, rutas y formularios.",
+        },
+        {
+            number: "04",
+            title: "Tailwind + Sistemas de diseño",
+            blockSummary: "10 clases + librería de componentes",
+            description:
+                "Tailwind v4, theme tokens, utilidades, creación de componentes reutilizables y escalables.",
+        },
+        {
+            number: "05",
+            title: "Proyecto final",
+            blockSummary: "1 proyecto completo",
+            description:
+                "Construcción de una app real con React + Tailwind, despliegue en Vercel y optimización.",
+        },
+    ],
+    cards: [
+        {
+            title: "De cero a PRO",
+            features: [
+                "Empiezas desde cero y terminas construyendo proyectos completos listos para mostrar.",
+                "Metodología paso a paso con ejemplos claros y aplicados.",
+                "Empiezas desde cero y terminas construyendo proyectos completos listos para mostrar.",
+                "Metodología paso a paso con ejemplos claros y aplicados.",
+            ],
+        },
+        {
+            title: "Sistemas de diseño",
+            features: [
+                "Aprende a crear componentes reutilizables y escalables con React + Tailwind.",
+                "Construye tu propia librería de UI.",
+                "Aprende a crear componentes reutilizables y escalables con React + Tailwind.",
+                "Construye tu propia librería de UI.",
+            ],
+        },
+        {
+            title: "IA aplicada",
+            features: [
+                "Integra IA en flujos reales para acelerar diseño, desarrollo y documentación.",
+                "Usa la IA como aliada en tu aprendizaje y trabajo diario.",
+                "Integra IA en flujos reales para acelerar diseño, desarrollo y documentación.",
+                "Usa la IA como aliada en tu aprendizaje y trabajo diario.",
+            ],
+        },
+    ],
+    faqs: [
+        {
+            title: "¿Necesito conocimientos previos?",
+            content: "No. Empezamos desde cero y avanzamos hasta nivel profesional con práctica constante.",
+        },
+        {
+            title: "¿Cuánto tiempo necesito por semana?",
+            content:
+                "Con 6–8 horas semanales puedes avanzar de forma sólida. Tienes materiales y retos guiados.",
+        },
+        {
+            title: "¿Incluye proyectos reales?",
+            content:
+                "Sí. Construirás un proyecto completo con React + Tailwind y lo desplegarás en producción.",
+        },
+        {
+            title: "¿Hay soporte?",
+            content: "Sí. Hay soporte y revisiones para desbloquearte rápido y mantener el ritmo.",
+        },
+    ],
+    tags: ["Metodología práctica", "Comunidad de soporte", "Proyectos reales"],
+    reviewsTitle: "Que opinan nuestros alumnos",
+    reviewsData: [
+        {
+            author: "Lucía, 29, Diseñadora → Frontend Dev",
+            content:
+                "Pensaba que programar no era para mí. Con la metodología del máster, en semanas ya estaba montando componentes y páginas completas.",
+            stars: 5,
+            image: "avatar1",
+        },
+        {
+            author: "Lucía, 29, Diseñadora → Frontend Dev",
+            content:
+                "Pensaba que programar no era para mí. Con la metodología del máster, en semanas ya estaba montando componentes y páginas completas.",
+            stars: 5,
+            image: "avatar2",
+        },
+        {
+            author: "David, 34, Frontend Engineer",
+            content:
+                "El enfoque en sistemas de diseño me cambió la forma de construir. Ahora mis proyectos escalan mejor y mi equipo trabaja más rápido.",
+            stars: 5,
+            image: "avatar3",
+        },
+        {
+            author: "David, 34, Frontend Engineer",
+            content:
+                "El enfoque en sistemas de diseño me cambió la forma de construir. Ahora mis proyectos escalan mejor y mi equipo trabaja más rápido.",
+            stars: 5,
+            image: "avatar4",
+        },
+    ],
+    timelineData: [
+        { year: "2010", description: "Primeros proyectos freelance en desarrollo web" },
+        { year: "2015", description: "Ingreso en GRUP Mediapro como Ingeniero de Software" },
+        { year: "2020", description: "Liderando desarrollo en apps OTT internacionales" },
+        { year: "2023", description: "Creación del Máster de Programación®" },
+        { year: "2025", description: "Más de 200 alumnos formados en React + Tailwind" },
+    ],
+    thisCourseIsForYouTitle: "Este curso es para ti si...",
+    thisCourseIsForYouCta: "Reserva tu plaza",
+    thisCourseIsForYouData: [
+        {
+            icon: "iconBulbGold",
+            title: "Principiantes",
+            description:
+                "No necesitas conocimientos previos. Ideal para quienes quieren iniciarse en la programación.",
+        },
+        {
+            icon: "iconBrainGold",
+            title: "Curiosos de la tecnología",
+            description: "Aprenderás con proyectos y ejemplos reales cómo funciona la programación moderna.",
+        },
+        {
+            icon: "iconBusinessGold",
+            title: "Profesionales",
+            description: "Mejora tus procesos y aporta soluciones digitales en tu empresa u organización.",
+        },
+        {
+            icon: "iconAppGold",
+            title: "Desarrolladores",
+            description:
+                "Construye tu base sólida en React + Tailwind y lleva tus proyectos al siguiente nivel.",
+        },
+    ],
+    seo: {
+        title: "Máster de Programación® – React y Tailwind CSS",
+        description:
+            "Domina la programación desde cero y construye interfaces PRO con React y Tailwind. Metodología práctica, sin humo, con guía paso a paso y soporte.",
+        lang: "es",
+    },
+    hero: {
+        eyebrow: "Máster de Programación® + IA",
+        title: "Aprende a programar desde cero",
+        subtitle:
+            "No es solo un curso: es tu entrada real al mundo de la programación y la IA. Todo el mundo puede.",
+        bullets: [
+            "Metodología práctica, paso a paso",
+            "React + Tailwind y sistemas de diseño modernos",
+            "Acompañamiento y enfoque 100% aplicado",
+        ],
+    },
+    instructor: {
+        name: "Juan Macías",
+        role: "Ingeniero de software y formador",
+        bio: "Años construyendo productos reales y ayudando a estudiantes a pasar de cero a apps profesionales.",
+        social: [
+            { label: "Instagram", href: "https://www.instagram.com/juan_sinlimites/" },
+            { label: "Web", href: "https://masterdeprogramacion.com/" },
+        ],
+    },
+    ctaSection: {
+        title: "¿Listo para empezar?",
+        subtitle:
+            "Plazas limitadas. Da el salto y crea productos de nivel profesional. Encuentra tu camino en el mundo tecnológico.",
+        buttonText: "Pedir información",
+        primaryCta: { label: "Apuntarme ahora", href: "/checkout" },
+        secondaryCta: { label: "Hablar por WhatsApp", href: "https://wa.me/34600000000" },
+    },
+    header: {
+        button: "Hablar por WhatsApp",
+    },
+    ctaSecondSection: {
+        title: "El único límite en programación es no empezar",
+        accent: "es no empezar",
+        author: "Juan Macías",
+        ctaButton: "Contactar",
+    },
+    footer: {
+        brand: "Máster de Programación. Todos los derechos reservados.",
+        author: "Diseño y código: Juan Macías con ❤️",
+    },
+};

@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { TextsContext } from "../context/TextContexts";
+
 const syllabusHeader = [
     {
         title: "Duration",
@@ -63,10 +66,12 @@ const syllabusContent = [
 ];
 
 export const Syllabus = () => {
+    const { texts } = useContext(TextsContext);
+
     return (
         <div className="">
             <div className="p-xl flex flex-col md:flex-row gap-lg rounded-2xl bg-white/10">
-                {syllabusHeader.map((item, index) => (
+                {texts?.syllabusHeader?.map((item, index) => (
                     <div className="flex-1 flex flex-col gap-1.5" key={index}>
                         <p className="text-brand-gray">{item.title}</p>
                         <h5>{item.content}</h5>
@@ -76,7 +81,7 @@ export const Syllabus = () => {
 
             <div>
                 <ul className="list-disc list-inside">
-                    {syllabusContent.map((item, index) => (
+                    {texts?.syllabusContent?.map((item, index) => (
                         <li
                             className={`py-6 px-xl flex flex-col md:flex-row gap-md md:gap-2xl ${
                                 index !== 0 && "border-t-[1px] border-brand-gray-light/30"

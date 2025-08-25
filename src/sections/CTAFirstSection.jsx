@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import bgImage from "../assets/images/bg-cta-first-section.jpg";
 import { Button } from "../components/Button";
 import { Container } from "../components/Container";
 import { SectionContainerWithBg } from "../components/SectionContainerWithBg";
+import { TextsContext } from "../context/TextContexts";
 
 export const CTAFirstSection = () => {
+    const { texts } = useContext(TextsContext);
+
     return (
         <SectionContainerWithBg
             bgImage={bgImage}
@@ -11,13 +15,12 @@ export const CTAFirstSection = () => {
         >
             <Container className="w-full">
                 <div className="flex flex-col gap-lg w-full md:w-1/2 text-center md:text-left">
-                    <h2>AI is no longer science fiction.</h2>
-                    <p>
-                        This course will show you what exactly AI is, how it works, and more importantly, how
-                        you can harness its power to make a difference!
-                    </p>
+                    <h2>{texts?.ctaSection?.title}</h2>
+                    <p>{texts?.ctaSection?.subtitle}</p>
                     <div>
-                        <Button onClick={() => console.log("Button clicked")}>Enroll Now</Button>
+                        <Button onClick={() => console.log("Button clicked")}>
+                            {texts?.ctaSection?.buttonText}
+                        </Button>
                     </div>
                 </div>
             </Container>

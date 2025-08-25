@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { ExpectationCard } from "../components/ExpectationCard";
 import { SectionContainer } from "../components/SectionContainer";
+import { TextsContext } from "../context/TextContexts";
 
 const cards = [
     {
@@ -29,13 +31,14 @@ const cards = [
 ];
 
 export const ExpectationSection = () => {
+    const { texts } = useContext(TextsContext);
     return (
         <SectionContainer
-            title="What to Expect from this course"
+            title={texts?.expectationTitle}
             bg="bg-brand-bg-darker"
             childrenContainerStyle={"grid grid-cols-1 lg:grid-cols-3 gap-lg"}
         >
-            {cards.map((card, index) => (
+            {texts?.cards?.map((card, index) => (
                 <ExpectationCard key={index} card={card} />
             ))}
         </SectionContainer>

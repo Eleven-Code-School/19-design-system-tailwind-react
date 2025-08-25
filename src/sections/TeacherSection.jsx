@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import brand1 from "../assets/images/brand-1.png";
 import brand2 from "../assets/images/brand-2.png";
 import brand3 from "../assets/images/brand-3.png";
@@ -6,6 +7,7 @@ import brand5 from "../assets/images/brand-5.png";
 import teacherPhoto from "../assets/images/teacher-photo.png";
 import { SectionContainer } from "../components/SectionContainer";
 import { Timeline } from "../components/Timeline";
+import { TextsContext } from "../context/TextContexts";
 
 const timelineData = [
     { year: "1998", description: "Machine Learning Researcher at XYZ Lab" },
@@ -25,6 +27,8 @@ const SectionContent = ({ title, childrenContainerStyle, children }) => {
 };
 
 export const TeacherSection = () => {
+    const { texts } = useContext(TextsContext);
+
     return (
         <SectionContainer
             title="Hello, I'm Juan Macías"

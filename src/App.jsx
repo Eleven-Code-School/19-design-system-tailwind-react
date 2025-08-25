@@ -13,6 +13,9 @@ import { ReviewsSection } from "./sections/ReviewsSection";
 import { TeacherSection } from "./sections/TeacherSection";
 import { ThisCourseIsForYouSection } from "./sections/ThisCourseIsForYou";
 
+export const API_DEV = "http://localhost:3000/api";
+export const API_PROD = "https://20-react-api.vercel.app/api";
+
 export const App = () => {
     return (
         <div className="h-dvh min-h-screen bg-brand-bg text-white">

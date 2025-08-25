@@ -37,7 +37,7 @@ const AccordionItem = ({ title, content, defaultOpen = false }) => {
                 })}
             >
                 <div className="min-h-0 overflow-hidden">
-                    <p>{typeof content === "string" ? <p>{content}</p> : content}</p>
+                    <div>{typeof content === "string" ? <p>{content}</p> : content}</div>
                 </div>
             </div>
         </section>
